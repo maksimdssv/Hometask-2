@@ -1,9 +1,11 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import {Action, configureStore, ThunkAction} from '@reduxjs/toolkit';
+import noteReducer from '../features/Note/NoteSlice';
+import formReducer from '../features/NoteForm/NoteFormSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    notes: noteReducer,
+    form: formReducer
   },
 });
 
