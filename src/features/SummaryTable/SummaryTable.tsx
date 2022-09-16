@@ -24,15 +24,18 @@ const SummaryTable = () => {
     }
 
     return <Table headers={["Note Category", "Active", "Archived", ""]}>
-        {taskActive + taskArchived > 0 && <SummaryItem imgPath={taskImg} category={"Task"} active={taskActive}
-                                                       archived={taskArchived}/>}
+        {taskActive + taskArchived > 0 &&
+            <SummaryItem imgPath={taskImg} category={"Task"} active={taskActive}
+                         archived={taskArchived}/>}
         {thoughtActive + thoughtArchived > 0 &&
             <SummaryItem imgPath={thoughtImg} category={"Random Thought"} active={thoughtActive}
                          archived={thoughtArchived}/>}
-        {ideaActive + ideaArchived > 0 && <SummaryItem imgPath={ideaImg} category={"Idea"} active={ideaActive}
-                                                       archived={ideaArchived}/>}
-        {quoteActive + quoteArchived > 0 && <SummaryItem imgPath={quoteImg} category={"Quote"} active={quoteActive}
-                                                         archived={quoteArchived}/>}
+        {ideaActive + ideaArchived > 0 &&
+            <SummaryItem imgPath={ideaImg} category={"Idea"} active={ideaActive}
+                         archived={ideaArchived}/>}
+        {quoteActive + quoteArchived > 0 &&
+            <SummaryItem imgPath={quoteImg} category={"Quote"} active={quoteActive}
+                         archived={quoteArchived}/>}
     </Table>
 }
 
