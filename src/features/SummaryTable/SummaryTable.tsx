@@ -12,7 +12,7 @@ const SummaryTable = () => {
     function getSummaryItems(summaryAmount: { [key: string]: { active: number, archived: number } }) {
         let summaryItems = [];
         for (const category in summaryAmount) {
-            const newItem = <SummaryItem imgPath={getImgPath(category)} category={category}
+            const newItem = <SummaryItem key={category} imgPath={getImgPath(category)} category={category}
                                          active={summaryAmount[category]["active"]}
                                          archived={summaryAmount[category]["archived"]}/>
             summaryItems.push(newItem);
