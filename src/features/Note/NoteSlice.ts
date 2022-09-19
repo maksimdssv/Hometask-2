@@ -1,5 +1,4 @@
 import {createSelector, createSlice, PayloadAction} from "@reduxjs/toolkit";
-import camelCase from 'lodash/camelCase';
 import DUMMY_NOTES, {Note} from "../../lib/dummy-notes";
 import {RootState} from "../../app/store";
 import {getCurrDate} from "../../lib/helpers";
@@ -63,12 +62,17 @@ export const selectArchivedNotesIds = (state: RootState) => {
 };
 
 export const getTotalAmount = (state: RootState) => {
-    const result: { [key: string]: number } = {};
+    const result: { [key: string]: { active: number, archived: number } } = {};
     state.notes.notesArr.forEach((note) => {
-        const category = camelCase(note.category) + (!note.isArchived ? "Active" : "Archived");
+        const category = note.category;
         if (result[category] === undefined) {
-            result[category] = 1;
-        } else result[category] += 1;
+            result[category] = {
+                active: 0,
+                archived: 0
+            };
+        }
+        const currState = note.isArchived ? "archived" : "active";
+        result[category][currState] += 1;
     });
     return result;
 }
