@@ -2,6 +2,8 @@
 
 Utilized TypeScript, Redux and React. No deploy avaliable this time.
 
+Hosted version available at https://hometask-2.herokuapp.com/.
+
 To start development server run the command below.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using
