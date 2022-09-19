@@ -1,3 +1,8 @@
+import taskImg from "../images/cart.png";
+import ideaImg from "../images/bulb.png";
+import quoteImg from "../images/quote.png";
+import thoughtImg from "../images/settings.png";
+
 export function checkDates(str: string) {
     return str.match(/[0-9]{1,2}[\/.\-_\\][0-9]{1,2}[\/.\-_\\][0-9]{4}/g)?.join(", ");
 }
@@ -25,4 +30,19 @@ export function getCurrDate() {
 export function scrollToElement(id: string) {
     const link = document.querySelector(id);
     link?.scrollIntoView({behavior: 'smooth', block: 'start'});
+}
+
+export function getImgPath(category: string) {
+    switch (category) {
+        case "Task":
+            return taskImg;
+        case "Idea":
+            return ideaImg;
+        case "Quote":
+            return quoteImg;
+        case "Random Thought":
+            return thoughtImg;
+        default:
+            return "";
+    }
 }
