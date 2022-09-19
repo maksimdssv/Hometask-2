@@ -1,6 +1,6 @@
 # Hometask #2
 
-Utilized TypeScript, Redux and React. No deploy avaliable this time.
+Utilized TypeScript, Redux and React.
 
 Hosted version available at https://hometask-2.herokuapp.com/.
 
