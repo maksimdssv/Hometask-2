@@ -1,6 +1,5 @@
 import {FC, useMemo} from "react";
 import {useAppDispatch, useAppSelector} from "../../app/hooks";
-import classes from './Note.module.css'
 import {checkDates, getImgPath, scrollToElement} from "../../lib/helpers";
 import ImgButton from "../../components/ImgButton";
 import editImg from "../../images/pencil.png";
@@ -40,13 +39,19 @@ const Note: FC<{ id: string }> = (props) => {
     }
 
 
-    return <tr className={classes.note}>
-        <td><img className={classes.image} src={img} alt={category}/>{name}</td>
-        <td>{creationDate}</td>
-        <td>{category}</td>
-        <td>{content}</td>
-        <td>{dates}</td>
+    return <tr className="bg-[powderblue] text-[gray] text-[20px]">
         <td>
+            <div className="flex items-center text-black">
+                <img className="w-[30px] p-[8px] box-content mr-[20px] rounded-[10px] bg-[dimgray]" src={img}
+                     alt={category}/>
+                {name}
+            </div>
+        </td>
+        <td>{creationDate}</td>
+        <td className="whitespace-normal">{category}</td>
+        <td>{content}</td>
+        <td className="whitespace-normal">{dates}</td>
+        <td className="text-right overflow-visible">
             <ImgButton imgPath={infoImg} alt={"info"} onClick={showNoteDetailsOnClick}/>
             <ImgButton imgPath={editImg} alt={"pencil"} onClick={showNoteFormOnClick}/>
             <ImgButton imgPath={archiveImg} alt={"archive"} onClick={archiveNoteOnClick}/>

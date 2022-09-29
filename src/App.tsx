@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './App.css';
 import NotesTable from "./features/NotesTable";
 import SummaryTable from "./features/SummaryTable/SummaryTable";
 import {scrollToElement} from "./lib/helpers";
@@ -14,11 +13,11 @@ function App() {
     }
 
     return (
-        <main className={"body"}>
+        <main className="my-0 mx-[5%] font-roboto">
             <NotesTable/>
             <NoteFormContainer/>
             <SummaryTable/>
-            <button onClick={toggleNotes}>Show Archived Notes</button>
+            <button className="mb-[15px]" onClick={toggleNotes}>Show Archived Notes</button>
             {showArchivedNotes && <NotesTable id={"scrollTable"} showArchivedNotes={true}/>}
         </main>
     );

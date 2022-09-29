@@ -4,7 +4,7 @@ import quoteImg from "../images/quote.png";
 import thoughtImg from "../images/settings.png";
 
 export function checkDates(str: string) {
-    return str.match(/[0-9]{1,2}[\/.\-_\\][0-9]{1,2}[\/.\-_\\][0-9]{4}/g)?.join(", ");
+    return str.match(/[0-9]{1,2}[/.\-_\\][0-9]{1,2}[/.\-_\\][0-9]{4}/g)?.join(", ");
 }
 
 const monthNumToStr = {

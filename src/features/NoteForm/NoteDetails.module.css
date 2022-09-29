@@ -1,8 +1,0 @@
-.details {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 30%;
-    background-color: lightsteelblue;
-    padding: 20px;
-}

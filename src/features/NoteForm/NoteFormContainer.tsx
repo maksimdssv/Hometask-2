@@ -12,9 +12,9 @@ const NoteFormContainer = () => {
     }
 
     return <>
-        <button onClick={showFormOnCLick}>Create Note</button>
+        <button className="mb-[15px]" onClick={showFormOnCLick}>Create Note</button>
         {formIsShown && !savedIsShown && <NoteForm id={id}/>}
-        {savedIsShown && !formIsShown && <h1>Saved !</h1>}
+        {savedIsShown && !formIsShown && <h1 className='font-bold text-2xl'>Saved !</h1>}
         {detailsAreShown && !savedIsShown && <NoteDetails id={id}/>}
     </>
 }

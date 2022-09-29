@@ -1,9 +1,10 @@
 import {FC} from "react";
-import classes from './ImgButton.module.css';
 
 const ImgButton: FC<{ imgPath: string, alt: string, onClick: () => void }> = (props) => {
-    return <button className={classes.btn} onClick={props.onClick}>
-        <img src={props.imgPath} alt={props.alt}/>
+    return <button className="rounded-[50%] border-none bg-inherit hover:bg-[cornflowerblue] active:bg-[blueviolet] p-0"
+                   onClick={props.onClick}>
+        <img className="w-[1.6vw] p-[8px] box-content" src={props.imgPath}
+             alt={props.alt}/>
     </button>
 }
 
