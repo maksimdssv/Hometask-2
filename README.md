@@ -1,6 +1,8 @@
-# Hometask #2
+# Hometask #2 Storybook ver.
 
-Utilized TypeScript, Redux and React. No deploy avaliable this time.
+Utilized TypeScript, Redux and React.
+
+Storybook available at https://633ca632631fc793a28c64dc-pruponycxe.chromatic.com/
 
 Hosted version available at https://hometask-2.herokuapp.com/.
 
